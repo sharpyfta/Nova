@@ -1,5 +1,5 @@
 var updates = [
-    {message: "Welcome to the 3rd official release of Andyum!"}
+    {message: "Hello, and Welcome to Nova Client! This is our first ever released contributing to, Dash & Noah the developers, and creators."}
 ];
 var updatespage = document.getElementById("updatespage");
 for(let item of updates) {
@@ -10,3 +10,4 @@ for(let item of updates) {
     a.appendChild(title);
     updatespage.appendChild(a);
 }
+
