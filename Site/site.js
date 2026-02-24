@@ -1,50 +1,78 @@
-function settings() {
-    var settings = document.getElementById("settings")
+// ================= TOGGLE PANELS =================
 
-    if (settings.style.display == "none") {
-        settings.style.display = "initial"
-    } else if (settings.style.display == "initial") {
-        settings.style.display = "none";
+function toggleElement(id) {
+    const element = document.getElementById(id);
+
+    if (getComputedStyle(element).display === "none") {
+        element.style.display = "block";
     } else {
-        settings.style.display = "initial"
+        element.style.display = "none";
     }
+}
+
+function settings() {
+    toggleElement("settings");
 }
 
 function updates() {
-    var settings = document.getElementById("updates")
-
-    if (settings.style.display == "none") {
-        settings.style.display = "initial"
-    } else if (settings.style.display == "initial") {
-        settings.style.display = "none";
-    } else {
-        settings.style.display = "initial"
-    }
+    toggleElement("updates");
 }
 
-if(localStorage.getItem("title").text != "") {
-    document.title = localStorage.getItem("title");
+
+// ================= LOAD SAVED TITLE =================
+
+const savedTitle = localStorage.getItem("title");
+
+if (savedTitle && savedTitle !== "") {
+    document.title = savedTitle;
 }
+
+
+// ================= SET TAB TITLE =================
 
 function titleSet(text) {
-    if(text != "") {
+    if (text.trim() !== "") {
         document.title = text;
         localStorage.setItem("title", text);
-    }
-    
-    else {
+    } else {
         localStorage.removeItem("title");
-        document.title = "Zaluea";
+        document.title = "NovaClient";
     }
 }
 
-function icoSet(text1) {
-    if(text != "") {
-        document.querySelector("link[rel= 'shortcut icon']").href = text1
+
+// ================= SET TAB ICON =================
+
+function iconSet(url) {
+    if (url.trim() !== "") {
+        let favicon = document.querySelector("link[rel='icon']");
+        if (!favicon) {
+            favicon = document.createElement("link");
+            favicon.rel = "icon";
+            document.head.appendChild(favicon);
+        }
+        favicon.href = url;
+        localStorage.setItem("icon", url);
     }
 }
+
+
+// ================= LOAD SAVED ICON =================
+
+const savedIcon = localStorage.getItem("icon");
+
+if (savedIcon) {
+    let favicon = document.querySelector("link[rel='icon']");
+    if (favicon) {
+        favicon.href = savedIcon;
+    }
+}
+
+
+// ================= RESET =================
 
 function reset() {
-    localStorage.removeItem('title');
-    window.location.href = "";
+    localStorage.removeItem("title");
+    localStorage.removeItem("icon");
+    location.reload();
 }
