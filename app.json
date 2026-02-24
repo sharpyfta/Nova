@@ -1,7 +1,7 @@
 {
-    "name": "Zaluea",
-    "description": "Zaluea is made for bypassing web restrictions.",
-    "repository": "https://github.com/TheIcy/Zaluea",
-    "logo": "https://github.com/TheIcy/Zaluea/blob/main/Site/images/logo.png?raw=true",
-    "keywords": ["zaluea", "games", "Ultraviolet"]
+    "name": "NovaClient",
+    "description": "NovaClient is a modern web client built for fast browsing, lightweight performance, and integrated web applications.",
+    "repository": "https://github.com/TheIcy/NovaClient",
+    "logo": "https://github.com/TheIcy/NovaClient/blob/main/Site/images/logo.png?raw=true",
+    "keywords": ["novaclient", "web client", "browser interface", "ultraviolet"]
 }
