@@ -1,0 +1,63 @@
+@import "{{ site.theme }}";
+
+/* ================= GLOBAL ================= */
+
+body {
+  background: radial-gradient(circle at top, #111 0%, #0b0b0b 40%, #000 100%);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ================= HEADER ================= */
+
+.page-header {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 40px rgba(0, 150, 255, 0.2);
+}
+
+.project-name {
+  letter-spacing: 3px;
+  font-weight: 600;
+  text-shadow: 0 0 15px rgba(0, 150, 255, 0.6);
+}
+
+.project-tagline {
+  opacity: 0.8;
+}
+
+/* ================= CONTENT ================= */
+
+.main-content {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: -40px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+/* ================= BUTTONS ================= */
+
+.btn {
+  background: #0f9bff;
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #007adf;
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(0, 150, 255, 0.5);
+}
+
+/* ================= LINKS ================= */
+
+a {
+  color: #4dc3ff;
+}
+
+a:hover {
+  text-shadow: 0 0 10px rgba(77, 195, 255, 0.8);
+}
